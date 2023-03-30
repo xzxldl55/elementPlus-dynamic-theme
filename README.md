@@ -1,3 +1,6 @@
+---
+highlight: ocean
+---
 # 基于elementPlus + Tailwindcss的动态主题配置方案
  elementPlus + tailwind 动态主题色配置方案
 
@@ -159,8 +162,6 @@ PS：同理，如果出现`tailwind`样式与其他库的样式出现冲突时�
 1. 使用`CSS`变量（如存在定制化需求同样可以额外添加`theme.css`的方案，二者可互相配合）。
 2. `elementPlus`则需要使用变量覆盖（覆盖35个主题色变量）。因为`Sass`变量覆盖的方法无法在变量中直接使用`CSS`变量（内部混合色算法需要有确定的已知的颜色才能进行，故无法使用不确定的变量），`Sass`变量覆盖的方案，只适用于固定预设好的一组组颜色主题切换方案。
 3. 结合上述两点，我们的主题方案就确定了**“`CSS`变量” + “`Tailwind`直接配置变量” + “`elementPlus`基于css变量自行计算混合色覆盖`elementPlus`变量”**
-
-​	
 
 ### 主题色品牌设计（brand）
 
@@ -627,10 +628,10 @@ import ElementBox from './components/element-box.vue';
     @apply flex-shrink-0 h-40 p-6 bg-black;
 }
 </style>
-
 ```
 
-![image-20230329172450904](C:\Users\lucky\AppData\Roaming\Typora\typora-user-images\image-20230329172450904.png)
+
+![image-20230329172450904.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/66b9de233e5b4fb4a126f93b48cf3111~tplv-k3u1fbpfcp-watermark.image?)
 
 可以看到，按钮颜色正是我们配置的主题色。
 
@@ -690,7 +691,8 @@ module.exports = {
 ...
 ```
 
-![image-20230329173016354](C:\Users\lucky\AppData\Roaming\Typora\typora-user-images\image-20230329173016354.png)
+
+![image-20230329173016354.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/038cee21be944ffea1f28cb65b97df01~tplv-k3u1fbpfcp-watermark.image?)
 
 这样就完成了整个项目中的动态主题使用了，我们可以编写一个简单的页面来查看效果。
 
@@ -873,7 +875,8 @@ const items = ref<Array<Item>>([
 </style>
 ```
 
-![image-20230330143346504](C:\Users\lucky\AppData\Roaming\Typora\typora-user-images\image-20230330143346504.png)
+
+![image-20230330143346504.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c3c108453e6e4cd9b92b27edc717e69c~tplv-k3u1fbpfcp-watermark.image?)
 
 ### 编写测试主题切换代码
 
@@ -968,12 +971,11 @@ const settingsModalRef = ref<typeof SettingsModal>();
 </script>
 ```
 
-![image-20230330143821084](C:\Users\lucky\AppData\Roaming\Typora\typora-user-images\image-20230330143821084.png)
+![image-20230330143821084.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b79cbe5530e74de5b634f0846d325daf~tplv-k3u1fbpfcp-watermark.image?)
 
 我们尝试修改一下主题色：
 
 修改一套紫色主题色，保存，查看效果，可以看到已经修改为我们期待的颜色了。
 
-![image-20230330144347135](C:\Users\lucky\AppData\Roaming\Typora\typora-user-images\image-20230330144347135.png)
-
+![image-20230330144347135.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dced07b68a07400582492f2d06a8930a~tplv-k3u1fbpfcp-watermark.image?)
 **这样，我们的主题切换系统就完成啦！**
