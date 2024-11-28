@@ -5,20 +5,20 @@ import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 export default defineConfig({
-    plugins: [
-        vue(),
-        AutoImport({
-            resolvers: [ElementPlusResolver()],
+  plugins: [
+    vue(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [
+        ElementPlusResolver({
+          importStyle: 'sass',
         }),
-        Components({
-            resolvers: [
-                ElementPlusResolver({
-                    importStyle: 'sass',
-                }),
-            ],
-        }),
-    ],
-    server: {
-        hmr: true,
-    },
+      ],
+    }),
+  ],
+  server: {
+    hmr: true,
+  },
 });
