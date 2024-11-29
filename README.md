@@ -1,6 +1,7 @@
----
-highlight: ocean
----
+具体项目详解可查看：
+[基于elementPlus + Tailwindcss的动态主题配置方案](https://juejin.cn/post/7216217118588321853)
+[elementPlus 自定义主题在暗黑模式下的问题探究](https://juejin.cn/post/7442573821444390949)
+
 # 基于elementPlus + Tailwindcss的动态主题配置方案
  elementPlus + tailwind 动态主题色配置方案
 
